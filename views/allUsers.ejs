@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+<nav>
+  <div class="navbar">
+    <div class="nav-title">
+      <a class="navbar-brand" href="/">Banking App</a>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link active" href="/alluser">All Customer</a>
+      <a class="nav-link" href="/transaction">Transaction</a>
+      <a href="/register" class="nav-link">Login</a>
+    </div>
+  </div>
+</nav>
+<div class="blur"></div>
+<div class="blur one"></div>
+
+<div class="allUsers">
+  <div class="usersContainer">
+    <div class="tableHead">
+      <h1>Name</h1>
+      <h1>Email</h1>
+      <h1>Balance</h1>
+    </div>
+    <% users.forEach(user=>{ %>
+      <a href="/user/<%=user._id%>">
+        <div class="tableBody">
+          <h1><%= user.name %></h1>
+          <h1><%= user.email %></h1>
+          <h1>Rs. <%= user.balance %></h1>
+        </div>
+      </a>
+    <% }) %>
+  </div>
+</div>

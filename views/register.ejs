@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<div class="registerContainer">
+  <div class="blur one"></div>
+  <div class="blur"></div>
+  <div class="registerContent">
+    <div class="registerTagline">
+      <h1>Create a User to <span>Transfer</span> money</h1>
+    </div>
+    <form action="/register" method="post" class="registerForm">
+      <input type="text" name="username" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="text" name="balance" placeholder="Amount" />
+      <button type="submit">Sign IN</button>
+    </form>
+  </div>
+</div>

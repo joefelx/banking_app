@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+<nav>
+  <div class="navbar">
+    <div class="nav-title">
+      <a class="navbar-brand" href="/">Banking App</a>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/alluser">All Customer</a>
+      <a class="nav-link active" href="/transaction">Transaction</a>
+      <a href="/register" class="nav-link">Login</a>
+    </div>
+  </div>
+</nav>
+<div class="blur"></div>
+<div class="blur one"></div>
+<div class="transactionContainer">
+  <div class="transactionContent">
+    <h1>Make Your <span>Transaction</span></h1>
+    <form action="/transaction" method="post" class="transactionForm">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="sender"
+          placeholder="Transaction From"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="receiver"
+          placeholder="Transaction To"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="amount"
+          placeholder="Amount"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Transact</button>
+    </form>
+  </div>
+</div>
