@@ -5,7 +5,6 @@ const dotenv = require("dotenv");
 const bcrpt = require("bcrypt");
 const User = require("./models/User");
 const app = express();
-const PORT = 3000;
 const saltRounds = 10;
 const currentuser = {};
 
@@ -98,6 +97,11 @@ app.post("/transaction", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is started at ${PORT}`);
+const port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, () => {
+  console.log(`Server is started at ${port}`);
 });
